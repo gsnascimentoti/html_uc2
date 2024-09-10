@@ -5,46 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizard</title>
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 
 <body>
     <header>
-        <section style="background-color: #DEDEDE;">
+        <!-- CSS INLINE -->
+        <section id="topo">
             <!-- barra cinza -->
             <nav>
                 <ul>
-                    <li>parcerias</li>
-                    <li>seja um franqueado</li>
-                    <li>inglês na sua escola</li>
+                    <li><a href="">Parcerias</a></li>
+                    <li><a href="">Seja um franqueado</a></li>
+                    <li><a href="">Inglês na sua escola</a></li>
                 </ul>
             </nav>
         </section>
         <section>
             <!-- barra principal    -->
             <nav>
-                <img src="./imagens/Logo Wizard.webp" alt="Logo">
+                <div id="logoFundo">
+                    <img src="./imagens/Logo Wizard.webp" alt="Logo">
+                </div>
+
                 <!-- "./" serve para direcionar com segurança a imagem -->
-                <ul>
+                <ul id="menuPrincipal">
                     <!-- menu principal -->
-                    <li>Cursos</li>
-                    <li>Escolas</li>
-                    <li>Estude Online</li>
-                    <li>Promoções</li>
-                    <li>Diferenciais</li>
-                    <li>Teste de Inglês</li>
-                    <li>Blog</li>
+                    <li><a href="">Cursos</a></li>
+                    <li><a href="">Escolas</a></li>
+                    <li><a href="">Estude Online</a></li>
+                    <li><a href="">Promoções</a></li>
+                    <li><a href="">Diferenciais</a></li>
+                    <li><a href="">Teste de Inglês</a></li>
+                    <li><a href="">Blog</a></li>
                 </ul>
             </nav>
         </section>
         <!-- Banner -->
-        <section>
+        <section id="carousel">
             <img src="./imagens/banner_carousel.png" alt="Carousel">
             <!-- <img src="./imagens/banner2_carousel.png" alt="Carousel2">
             <img src="./imagens/banner3_carousel.png" alt="Carousel3">
             <img src="./imagens/banner4_carousel.png" alt="Carousel4"> -->
         </section>
         <!-- Barra com slogan     -->
-        <section>
+        <section id="slogan">
             <h2>Wizard by Pearson, estude inglês na maior rede de escolas de idiomas do Brasil.</h2>
         </section>
     </header>
@@ -55,10 +60,22 @@
             <h3>Ideal para você</h3>
             <h1>Conheça alguns de nossos diferenciais!</h1>
             <!-- 4 cards com cursos      -->
-            <article>A partir dos 11 anos</article>
-            <article>A partir dos 3 anos</article>
-            <article>Dos 11 aos 14 anos</article>
-            <article>A partir de 15 anos</article>
+            <div class="layoutCursos">
+                <article class="cursos">
+                    <div>
+                        <div class="imgbg"></div>
+                        <img id="cursosimg" src="./imagens/A-partir-dos-11-anos.webp"
+                            alt="menina vendo aula no notebook">
+                    </div>
+                    <h3>A partir dos 11 anos</h3>
+                    <h2>Curso de Inglês Online</h2>
+                    <p>Wizard ON é muito mais que um curso de inglês online, é a solução completa onde você estiver!</p>
+                    <h4><a>Saiba mais</a></h4>
+                </article>
+                <article class="cursos">A partir dos 3 anos</article>
+                <article class="cursos">Dos 11 aos 14 anos</article>
+                <article class="cursos">A partir de 15 anos</article>
+            </div>
         </section>
         <!-- Wizkids -->
         <section>
@@ -69,7 +86,7 @@
             <article>
                 <p>Curso de inglês especialmente para crianças, onde elas aprendem inglês com materiais e atividades
                     especiais, tudo para tornar o estudo do idioma mais leve e divertido.</p>
-                <button>Conheça a Wizkids</button>    
+                <button>Conheça a Wizkids</button>
             </article>
         </section>
         <!-- Formulário -->
@@ -152,15 +169,26 @@
             </section>
         </section>
         <!-- FAQ -->
-         <section>
+        <section>
             <h4>FAQ</h4>
-            <h1>Confira as perguntas mais frequentes</h1>            
-         </section>
+            <h1>Confira as perguntas mais frequentes</h1>
+        </section>
     </main>
     <footer>
         <!-- Rodapé -->
     </footer>
-
+    <script>
+        function alteraTamanho() {
+            const cardW = document.querySelector('.cursos').offsetWidth
+            const cardH = document.querySelector('#cursosimg').offsetHeight
+            console.log(`Largura: ${cardW} Altura: ${cardH}`)
+            const imgFiltro = document.querySelector('.imgbg')
+            imgFiltro.style.width = (cardW + 'px')
+            imgFiltro.style.height = (cardH + 'px')
+        }
+        alteraTamanho()
+        window.addEventListener('resize', alteraTamanho)
+    </script>
 </body>
 
 </html>
