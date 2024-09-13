@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizard</title>
     <link rel="stylesheet" href="./css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
                 <article class="cursos">
                     <div>
                         <div class="imgbg"></div>
-                        <img id="cursosimg" src="./imagens/A-partir-dos-11-anos.webp"
+                        <img class="cursosimg" src="./imagens/A-partir-dos-11-anos.webp"
                             alt="menina vendo aula no notebook">
                     </div>
                     <h3>A partir dos 11 anos</h3>
@@ -72,7 +73,18 @@
                     <p>Wizard ON é muito mais que um curso de inglês online, é a solução completa onde você estiver!</p>
                     <h4><a>Saiba mais</a></h4>
                 </article>
-                <article class="cursos">A partir dos 3 anos</article>
+                <article class="cursos">
+                    <div>
+                        <div class="imgbg"></div>
+                        <img class="cursosimg" src="./imagens/A-partir-dos-3-anos.webp" alt="criança na sala de aula">
+                    </div>
+                    <h3>A partir dos 3 anos</h3>
+                    <h2>Curso de Inglês para crianças</h2>
+                    <p>Inglês com material e atividades especiais, tudo para tornar o estudo do idioma mais leve e
+                        divertido.</p>
+                    <h4><a>Saiba mais</a></h4>
+                </article>
+
                 <article class="cursos">Dos 11 aos 14 anos</article>
                 <article class="cursos">A partir de 15 anos</article>
             </div>
@@ -180,15 +192,19 @@
     <script>
         function alteraTamanho() {
             const cardW = document.querySelector('.cursos').offsetWidth
-            const cardH = document.querySelector('#cursosimg').offsetHeight
+            const cardH = document.querySelector('.cursosimg').offsetHeight
             console.log(`Largura: ${cardW} Altura: ${cardH}`)
-            const imgFiltro = document.querySelector('.imgbg')
-            imgFiltro.style.width = (cardW + 'px')
-            imgFiltro.style.height = (cardH + 'px')
+            const imgFiltro = document.querySelectorAll
+            imgFiltros.array.forEach(element => {
+                imgFiltro.style.width = (cardW + 'px')
+                imgFiltro.style.height = (cardH + 'px')
+            });
+
         }
         alteraTamanho()
         window.addEventListener('resize', alteraTamanho)
-    </script>
+    </script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
