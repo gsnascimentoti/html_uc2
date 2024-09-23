@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B);
+
+/* @media screen (max-width: 430px);{
+} */
 body {
     background: linear-gradient(#3700641f, #6207ac13);
     margin: 0;
@@ -28,9 +31,10 @@ body {
 
 .topo ul li a {
     padding: 10px;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
     color: #bf7ff3;
+    font-family: 'Open Sans';
 }
 
 .barraPrincipal {
@@ -47,7 +51,12 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+.nav-item{
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #4a0385;
+}
 .search-txt {
     border: none;
     background: none;
@@ -61,9 +70,10 @@ body {
     font-family: 'Open Sans';
 }
 
-::-webkit-input-placeholder{
-    color: #9f6aca;     
+::-webkit-input-placeholder {
+    color: #9f6aca;
 }
+
 .botao-pesquisa {
     color: #bf7ff3;
     width: 35px;
@@ -97,7 +107,7 @@ body {
 }
 
 #fundoLogo {
-    background: radial-gradient(#37006456, #6207ac02);
+    background: radial-gradient(#ffffffa9, #6207ac42);
     border-radius: 40px;
     margin-left: 30px;
     margin-right: 30px;
@@ -105,6 +115,7 @@ body {
 
 #textoLogo {
     color: #370064;
+    font-family: 'Open Sans'
 }
 
 #logo {
@@ -117,7 +128,7 @@ body {
 header section nav a {
     display: flex;
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 header section nav a img {
@@ -147,19 +158,30 @@ nav {
     height: 360px;
 }
 
-header section h2 {
-    Color: #13237e;
-    text-align: center;
-    font-family: Open Sans, sans-serif;
-    font-size: 20px;
+.frete-gratis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    padding: 10px;
+}
+
+#caminhao {
+    color: #4a0385;
+}
+
+#frete-gratis-texto {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #4a0385;
     font-style: normal;
+    font-family: 'Open Sans';
     font-weight: 700;
-    line-height: normal;
-    margin: 0 0 20px;
 }
 
 #conteudoPrincipal {
     display: flex;
+    flex-direction: column;
     margin-top: 30px;
     margin-bottom: 20px;
     margin-left: 60px;
@@ -167,6 +189,9 @@ header section h2 {
     padding: 40px;
     border: solid #370064;
     background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #colunaProdutos {
@@ -178,7 +203,10 @@ header section h2 {
     flex-direction: column;
     width: 40vw;
     border: solid 1px #444;
+    border-radius: 10px;
     text-align: left;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .produto img {
@@ -188,16 +216,22 @@ header section h2 {
 .produto button {
     border: none;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #370064ef;
+    color: #d5bee9;
 }
-
+.produto h1{
+    font-weight: 700
+}
 .produto button svg {
     margin-left: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
 }
 
 footer {
@@ -235,10 +269,8 @@ footer div ul {
 
 .footer-texto {
     color: #bf7ff3;
+    display: flex;
     flex-direction: column;
-}
-
-.footer-texto h4 {
-    color: #bf7ff3;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
