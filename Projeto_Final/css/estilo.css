@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27%29%3B);
 
-/* @media screen (max-width: 430px);{
-} */
+@media(min-width:1024px) {
+    .col img {
+      width: 100%;
+    }
+}  
 body {
     background: linear-gradient(#3700641f, #6207ac13);
     margin: 0;
